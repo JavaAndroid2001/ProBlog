@@ -1,35 +1,33 @@
 <template>
     <header>
         <nav>
-            <div class="iweb">
+            <div class="iweb navlist">
                 <span class="iconfont icon-yuyan"></span>
                 <ul>
-
-                    <li v-for="i in iweb" :style="{ backgroundColor: i.backColor }">
+                    <li v-for="i in iweb" :style="{ backgroundColor: i.backColor }" :key="i.name">
                         <a target="_blank" :href="i.url">
                             <span class="iconfont" :class="[i.icons]"></span>
                             {{ i.name }}
                         </a>
                     </li>
-
                 </ul>
             </div>
-            <div class="zan">
+            <div class="zan navlist">
                 <span class="iconfont icon-zan"></span>
                 <p class="zanqun"></p>
             </div>
-            <div class="shouye">
+            <div class="shouye navlist">
                 <span class="iconfont icon-shouye"></span>
             </div>
-            <div class="sousuo">
+            <div class="sousuo navlist">
                 <span class="iconfont icon-sousuo">
                 </span>
-                <search class="search">
+                <div class="search">
                     <input type="text">
                     <p class="iconfont icon-sousuo"></p>
-                </search>
+                </div>
             </div>
-            <div class="shezhi">
+            <div class="shezhi navlist">
                 <span class="iconfont icon-shezhi"></span>
             </div>
         </nav>

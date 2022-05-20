@@ -25,7 +25,7 @@
         </div>
         <div class="content-right">
             <ul>
-                <li v-for="i in 4">
+                <li v-for="i in 4" :key="i">
                     <img src="https://q1.qlogo.cn/g?b=qq&nk=614537575&s=640">
                     <div class="list">
                         <div class="title">
@@ -33,24 +33,7 @@
                             {{ i }}
                         </div>
                         <div class="text">
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-                            哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+                            <!-- <Pagination /> -->
 
                         </div>
                     </div>
@@ -63,11 +46,19 @@
 </template>
 
 <script>
-import Nav from "../components/nav.vue";
+
 export default {
+    data() {
+        return {
+
+        }
+    },
     components: {
-        Nav
-    }
+
+    },
+    methods: {
+
+    },
 }
 </script>
 
