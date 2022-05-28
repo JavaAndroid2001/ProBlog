@@ -9,8 +9,8 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'index',
-    component: Index
+    name: 'Main',
+    component: () => import('../views/Main')
   }
 ]
 

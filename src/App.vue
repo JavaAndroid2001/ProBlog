@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- 导航栏 -->
-    <Nav></Nav>
+    <!-- <Nav></Nav> -->
     <router-view />
 
   </div>
@@ -15,23 +15,10 @@ export default {
   }
 }</script>
 <style lang="scss">
-#app {
-  // background-color: #487eb0;
-  display: flex;
-  // justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  // background-image: url('@/assets/imgs/bg.png');
-  background-color: #353b48;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // user-select: none;
 }
 
 img {

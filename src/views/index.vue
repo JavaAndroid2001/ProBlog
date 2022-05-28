@@ -5,27 +5,12 @@
             <div class="nk">
                 <img src="https://q1.qlogo.cn/g?b=qq&nk=614537575&s=640">
             </div>
-            <div class="idetile">
-                <h2>小柴Prog</h2>
-                <div class="text">
-                    我只是一个 <span class="sty">催逝员</span>
-                    <br />
-                    味道不咸不淡
-                    <br />
-                    你看我是苦<span class="sty">是甜</span>
-                    <br />
-                    虽然来自<span class="sty">重庆</span>
-                    <br />
-                    还有点<span class="sty">荣幸</span>
-                    <br />
-                    但我和鸡绝对不会<span class="sty">同命</span>
-                    <el-button>默认按钮</el-button>
-                </div>
-            </div>
+            <!-- idetile -->
+            <Idetile />
         </div>
         <div class="content-right">
             <ul>
-                <li v-for="i in 4" :key="i">
+                <li v-for="i in 10" :key="i">
                     <img src="https://q1.qlogo.cn/g?b=qq&nk=614537575&s=640">
                     <div class="list">
                         <div class="title">
@@ -33,31 +18,67 @@
                             {{ i }}
                         </div>
                         <div class="text">
-                            <!-- <Pagination /> -->
-
                         </div>
                     </div>
                 </li>
-
-
             </ul>
         </div>
     </div>
 </template>
 
 <script>
+import Idetile from "../components/idetile.vue";
 
 export default {
     data() {
         return {
+            titleData: [
+                '热爱生活，热爱学习，热爱工作',
+                '能够独立开发',
+                '精通Web前端三剑客',
+                '熟练掌握Vue，UniApp，Element开发框架',
+                '有良好的笔记习惯，代码规范，能够对UI进行高度还原',
+            ],
 
+            idetileData: {
+                items: {
+                    data: [
+                        {
+                            title: '自我介绍',
+                            content: [
+                                '热爱生活，热爱学习，热爱工作',
+                                '能够独立开发',
+                                '精通Web前端三剑客',
+                                '熟练掌握Vue，UniApp，Element开发框架',
+                                '有良好的笔记习惯，代码规范，能够对UI进行高度还原',
+                            ],
+                            LinColor: 'background: linear-gradient(#70a1ff, #5352ed);'
+                        },
+                        {
+                            title: '我生活的地方',
+                            content: [
+                                '热爱生活，热爱学习，热爱工作',
+                                '能够独立开发',
+                                '精通Web前端三剑客',
+                                '熟练掌握Vue，UniApp，Element开发框架',
+                                '有良好的笔记习惯，代码规范，能够对UI进行高度还原',
+                            ],
+                            LinColor: 'background: linear-gradient(#70a1ff, #5352ed);'
+                        },
+                    ]
+                }
+            },
+            curID: 0
         }
     },
     components: {
+        Idetile,
 
     },
     methods: {
-
+        activeClick(index) {
+            this.curID = index
+        }
     },
 }
 </script>
@@ -68,7 +89,7 @@ export default {
     display: flex;
     justify-content: center;
     margin: 20px;
-    height: 100vh;
+    height: 100%;
     width: 90vw;
     background-color: rgba($color: #000, $alpha: .2);
     border-radius: 10px;
@@ -102,33 +123,7 @@ export default {
             }
         }
 
-        .idetile {
-            color: #fff;
-            font-weight: 700;
-            width: 100%;
 
-            h2 {
-                text-align: center;
-                color: #fff;
-            }
-
-            .text {
-                margin-top: 20px;
-                width: 100%;
-                height: 400px;
-                border-radius: 10px;
-                border: 1px solid rgba($color: #fff, $alpha: .5);
-                text-decoration: underline 10px;
-                padding: 10px;
-                line-height: 40px;
-
-                .sty {
-                    font-size: 40px;
-                    font-style: italic;
-                    color: red;
-                }
-            }
-        }
     }
 
     .content-right {
