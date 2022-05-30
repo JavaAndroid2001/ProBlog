@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <iframe
-      src="http://progweb.xyz/#/"
+      src="https://progweb.xyz/#/"
       width="393px"
       height="851px"
       frameborder="0"
@@ -64,6 +64,7 @@ export default {};
     border-radius: 10px;
     background-color: #fff;
     padding: 20px;
+    box-shadow: 3px 3px 10px #000;
     // 使用技术
     .art {
       display: flex;
@@ -77,6 +78,7 @@ export default {};
         display: grid;
         place-items: center;
         font-weight: 60;
+        box-shadow: 3px 3px 3px #000;
       }
     }
     .items {
